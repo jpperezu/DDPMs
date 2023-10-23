@@ -65,6 +65,8 @@ Your task is to fill the TODOs in ddpm_conditional.py and modules.py in order to
 **c. Model Training:**
 If you want, you can train your own models to experiment with the hyperparameters. However, you should download the checkpoints trained with the default parameters in the launch function [here](https://drive.google.com/drive/folders/1beUSI-edO98i6J9pDR67BKGCfkzUL5DX). Create a folder named checkpoints at the scripts level to store them. Use these checkpoints to make a comparison between NO EMA and NO CFG (i.e., CFG=0); EMA and NO CFG; CFG and NO EMA; CFG and EMA. For example:
 
+![point2_image](./point2.png)
+
 Observe the original images from Fashion CIFAR-10. **Discuss the influence of EMA and CFG in the overall quality of the generated images.** 🤗
 
 ## References
