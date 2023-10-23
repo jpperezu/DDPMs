@@ -87,7 +87,7 @@ From there on you can derive the simplified objective. See [Understanding the Va
 
 Good luck! 😜
 
-### Deadline
+## Deadline
 
 14 Nov 2023
 
