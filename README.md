@@ -1,6 +1,6 @@
 # DDPMs
 
-In this homework you are going to learn how to implement DDPMs from scratch. First, you will implement an unconditional model and then a classifier-free guidance model (CFG). Answer questions wiht 🤗 and upload them as Lastname_DDPM.pdf 
+In this homework you are going to learn how to implement DDPMs from scratch. First, you will implement an unconditional model and then a classifier-free guidance model (CFG). Answer questions with 🤗 and upload them as Lastname_DDPM.pdf 
 
 ## Point 1 (Unconditional) {2.5} [1]
 ### Forward Process
@@ -68,6 +68,11 @@ If you want, you can train your own models to experiment with the hyperparameter
 ![point2_image](./point2.png)
 
 Observe the original images from Fashion CIFAR-10. **Discuss the influence of EMA and CFG in the overall quality of the generated images.** 🤗 {1.0}
+
+## Bonus {0.5} 
+
+Empirically, [Ho et al. (2020)](https://arxiv.org/abs/2006.11239) found that suing a simplified objective that ignores the weighting term to train the diffusion model works better. 
+
 
 ## References
 
