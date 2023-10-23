@@ -71,7 +71,21 @@ Observe the original images from Fashion CIFAR-10. **Discuss the influence of EM
 
 ## Bonus {0.5} 
 
-Empirically, [Ho et al. (2020)](https://arxiv.org/abs/2006.11239) found that suing a simplified objective that ignores the weighting term to train the diffusion model works better. 
+Empirically, [Ho et al. (2020)](https://arxiv.org/abs/2006.11239) found that using a simplified objective that ignores the weighting term to train the diffusion model works better. Also, the final simplified objective predicts the noise ϵ_t:
+
+$$
+L_t^{simple}=E_{(t \sim [1,T], x_0, \epsilon_t)} [|(|\epsilon_t - \epsilon_\theta(x_t, t)|^2 ]
+$$
+
+Arrive to this simplified objective both starting from optimizing the negative log-likelihood and starting from the log probability of the observations. The meeting point between these 2 approaches is to get to the variational lower bound, also called ELBO:
+
+$$
+L_{VLB}=E_{q(x_{0:T})} [\log\left(\frac{q(x_{1:T}|x_0 )}{p_\theta(x_{0:T})}\right)]
+$$
+
+From there on you can derive the simplified objective. See [Understanding the Variational Lower Boun](https://xyang35.github.io/2017/04/14/variational-lower-bound/), [Evidence, KL-divergence, and ELBO](https://mpatacchiola.github.io/blog/2021/01/25/intro-variational-inference.html) and [What are Diffusion Models?](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/)
+
+Good luck! 😜
 
 
 ## References
